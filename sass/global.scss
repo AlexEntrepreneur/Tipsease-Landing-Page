@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: $normal-space;
+}
+
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: $normal-space;
+}
+
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: $normal-space;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: $normal-space;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    max-width: 85%;
+  }
+
+  .full-width {
+    max-width: 100%;
+  }
+}
