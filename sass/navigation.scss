@@ -1,0 +1,28 @@
+header {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .header-menu-icon {
+      width: 3rem;
+      height: 3rem;
+      content: url('/assets/img/633647.svg');
+      cursor: pointer;
+    }
+
+    .header-logo {
+      height: 3rem;
+      max-width: 30%;
+      content: url('/assets/img/ls.png');
+
+      img {
+        position: absolute;
+        height: 100%;
+      }
+    }
+  }
+}

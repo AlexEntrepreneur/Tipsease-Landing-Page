@@ -1,7 +1,13 @@
 .hero-container {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .hero-heading, .hero-subheading {
     text-align: center;
+  }
+
+  button {
+    width: 20rem;
   }
 }
