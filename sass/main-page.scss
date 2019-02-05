@@ -1,7 +1,5 @@
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexbox(column, null, center);
 
   .hero-heading, .hero-subheading {
     text-align: center;

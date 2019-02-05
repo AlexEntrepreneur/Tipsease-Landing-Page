@@ -1,11 +1,9 @@
 header {
   height: 7rem;
-  display: flex;
-  align-items: center;
+  @include flexbox(null, null, center);
 
   .container {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(null, space-between, null);
 
     .header-menu-icon {
       width: 3rem;
