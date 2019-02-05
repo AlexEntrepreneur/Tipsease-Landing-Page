@@ -68,3 +68,15 @@
     }
   }
 }
+
+.features-section {
+  background-color: $placeholder-light-grey;
+
+  .feature-container {
+    margin-bottom: $medium-space;
+
+    h3, p {
+      text-align: center;
+    }
+  }
+}
