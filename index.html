@@ -3,25 +3,299 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title></title>
   </head>
   <body>
+    <div id="mobileMenu">
+      <div class="top-container">
+        <div class="row padding-sides">
+          <a class="header-logo menu"></a>
+          <i class="close-menu-icon"></i>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+      </nav>
+      <button class="btn-primary btn-small no-margin">Log In</button>
+    </div>
     <header>
-      <div class="container padding-sides">
-        <i class="header-menu-icon">&nbsp;</i>
+      <div class="row padding-sides">
         <a class="header-logo"></a>
+        <i class="header-menu-icon"></i>
       </div>
     </header>
     <div class="main-content-container">
-      <section class="container hero-container">
+
+      <!-- HERO/HEADING SECTION -->
+
+      <section class="row hero-section">
         <h1 class="hero-heading">Main Value Proposition Statement</h1>
         <p class="hero-subheading">Sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
         <button class="btn-primary">Get Started</button>
         <button>Learn More &#9655;</button>
-        <img class="hero-img" src="assets/img/ptr.png" alt="">
+        <div class="large-bg-circle">
+          <img class="hero-img" src="assets/img/ptr.png" alt="">
+        </div>
+      </section>
+
+      <!-- HOW DOES IT WORK SECTION -->
+
+      <section class="row how-section">
+        <h1 class="section-heading">How Does It Work?</h1>
+
+        <!-- Step 1 -->
+        <div class="text-grid how-step">
+          <h3 class="section-subheading">Plug In Your Accounts</h3>
+          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <figure>
+            <img src="assets/img/ptr.png" alt="">
+          </figure>
+          <h1 class="how-step-number full-width">1.</h1>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-grid how-step">
+          <h3 class="section-subheading">Plug In Your Accounts</h3>
+          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <figure>
+            <img src="assets/img/ptr.png" alt="">
+          </figure>
+          <h1 class="how-step-number full-width">2.</h1>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-grid how-step">
+          <h3 class="section-subheading">Plug In Your Accounts</h3>
+          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <figure>
+            <img src="assets/img/ptr.png" alt="">
+          </figure>
+          <h1 class="how-step-number full-width">3.</h1>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-grid how-step">
+          <h3 class="section-subheading">Plug In Your Accounts</h3>
+          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <figure>
+            <img src="assets/img/ptr.png" alt="">
+          </figure>
+          <h1 class="how-step-number full-width">4.</h1>
+        </div>
+
+      </section>
+
+      <!-- KEY FEATURES SECTION -->
+
+      <section class="row features-section">
+        <h1 class="section-heading">Key Features</h1>
+
+        <!-- Feature 1 -->
+        <div class="text-grid feature-container">
+          <figure>
+            <img src="assets/img/ls.png" alt="">
+          </figure>
+          <figcaption>
+            <h3 class="section-subheading">Secure</h3>
+            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+          </figcaption>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="text-grid feature-container">
+          <figure>
+            <img src="assets/img/ls.png" alt="">
+          </figure>
+          <figcaption>
+            <h3 class="section-subheading">Peer-to-Peer</h3>
+            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+          </figcaption>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="text-grid feature-container">
+          <figure>
+            <img src="assets/img/ls.png" alt="">
+          </figure>
+          <figcaption>
+            <h3 class="section-subheading">Instant</h3>
+            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+          </figcaption>
+        </div>
+      </section>
+
+      <!-- PROCESS SECTION -->
+
+      <section class="process-section">
+        <h1 class="section-heading">The Tipsease Process</h1>
+        <div class="h-scroll-container full-width">
+
+          <!-- Step 1 -->
+          <div class="h-scroll-item">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>Select Payment Method</p></figcaption>
+            <select class="dropdown process-dropdown">
+              <option value="">Contactless Card</option>
+              <option value="">Apple Pay</option>
+              <option value="">Google Pay</option>
+              <option value="">Bitcoin</option>
+            </select>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="h-scroll-item process-circle">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>Tap Devices Together</figcaption>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="h-scroll-item process-circle">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>Customer Enters Amount</figcaption>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="h-scroll-item process-circle">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>Confirm Transaction</figcaption>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="h-scroll-item process-circle">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>Receive You Tip!</figcaption>
+          </div>
+          &nbsp; <!-- Fixes last child right margin not working -->
+        </div>
+      </section>
+
+      <!-- PRICING SECTION -->
+
+      <section class="row pricing-section">
+        <h1 class="section-heading">Pricing</h1>
+        <div class="price-card">
+          <h1 class="no-margin">1%</h1>
+          <p class="price-caption">of every transaction</p>
+          <p class="price-benefit no-margin">No Extra Fees</p>
+          <p class="price-benefit no-margin">No Something Fees</p>
+          <p class="price-benefit no-margin">No Other Fees</p>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD SECTION -->
+
+      <section class="row download-section">
+        <h3 class="section-heading">Get Your Hands On The App!</h3>
+        <div class="download-btn-container">
+          <button class="app-store-btn">App Store</button>
+          <button class="play-store-btn">Play Store</button>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+
+      <section class="testimonials-section">
+        <div class="h-scroll-container full-width">
+
+          <!-- Quote 1 -->
+          <div class="h-scroll-item">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <div class="quote-text-container">
+              <span class="quote-mark no-margin">"</span>
+              <p class="quote-text">Some encouraging quote text goes here.</p>
+              <p class="quote-person">Firstname Lastname,</p>
+              <p class="quote-occupation">Occupation</p>
+            </div>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="h-scroll-item">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <div class="quote-text-container">
+              <span class="quote-mark no-margin">"</span>
+              <p class="quote-text">Some encouraging quote text goes here.</p>
+              <p class="quote-person">Firstname Lastname,</p>
+              <p class="quote-occupation">Occupation</p>
+            </div>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="h-scroll-item">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <div class="quote-text-container">
+              <span class="quote-mark no-margin">"</span>
+              <p class="quote-text">Some encouraging quote text goes here.</p>
+              <p class="quote-person">Firstname Lastname,</p>
+              <p class="quote-occupation">Occupation</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATISTICS SECTION -->
+
+      <section class="row stats-section">
+        <div class="stat-container">
+          <h1 class="stat no-margin">321</h1>
+          <p class="stat-title">Some stat goes here</p>
+        </div>
+        <div class="stat-container">
+          <h1 class="stat no-margin">321</h1>
+          <p class="stat-title">Some stat goes here</p>
+        </div>
+        <div class="stat-container">
+          <h1 class="stat no-margin">321</h1>
+          <p class="stat-title">Some stat goes here</p>
+        </div>
+        <div class="stat-container">
+          <h1 class="stat no-margin">321</h1>
+          <p class="stat-title">Some stat goes here</p>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+
+      <section class="row cta-section">
+        <h3 class="section-heading">Take your service to the next level with Tipsease.</h3>
+        <button class="btn-primary">Sign Up</button>
       </section>
     </div>
+
+    <footer class="row">
+      <div class="footer-btns-container">
+        <a class="footer-logo"></a>
+        <div class="social-icon-container">
+          <button class="social-icon twitter no-margin"></button>
+          <button class="social-icon facebook no-margin"></button>
+          <button class="social-icon linkedin no-margin"></button>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2019 Tipsease Inc.</p>
+      <div class="footer-links-container">
+        <a class="footer-link">Privacy</a>
+        <a class="footer-link">Terms of Service</a>
+      </div>
+    </footer>
     <script src="global.js" charset="utf-8"></script>
   </body>
 </html>
