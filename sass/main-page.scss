@@ -169,8 +169,11 @@
 
   .download-btn-container {
     margin-bottom: $large-space;
+    width: 100%;
+    display: flex;
 
     button {
+      width: 50%;
       margin: 0;
       border: none;
       color: white;
@@ -178,12 +181,14 @@
     }
 
     .app-store-btn {
-      margin-right: $small-space;
+      margin-right: $normal-space;
     }
   }
 }
 
 .testimonials-section {
+  background-color: $placeholder-grey;
+
   .h-scroll-item {
     border-right: 1px solid rgba(0,0,0,0.1);
   }
@@ -244,19 +249,30 @@
     .stat-title {
       font-size: 1.2rem;
       text-align: center;
+      margin-bottom: $large-space;
     }
   }
-  
+
   &::after {
     content: '';
     position: absolute;
-    top: 50%;
+    top: -46vw;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 140vw;
+    transform: translateX(-50%);
+    width: 230vw;
     height: 140vw;
     z-index: -1;
     background-color: $placeholder-light-grey;
     border-radius: 100%;
+  }
+}
+
+.cta-section {
+  .section-heading {
+    margin-bottom: $normal-space;
+  }
+  button {
+    width: 100%;
+    margin-bottom: $large-space;
   }
 }
