@@ -226,3 +226,37 @@
     }
   }
 }
+
+.stats-section {
+  position: relative;
+  @include flexbox(row, null, null, wrap);
+  padding: $large-space 0;
+  overflow: visible;
+
+  .stat-container {
+    width: 50%;
+
+    .stat {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .stat-title {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140vw;
+    height: 140vw;
+    z-index: -1;
+    background-color: $placeholder-light-grey;
+    border-radius: 100%;
+  }
+}
