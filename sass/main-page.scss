@@ -81,3 +81,35 @@
     }
   }
 }
+
+.process-section {
+  .h-scroll-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: $medium-space 0 $medium-space  16%;
+    @include flexbox(null, flex-start, center, null);
+    -webkit-overflow-scrolling: touch;
+
+    .h-scroll-item {
+      flex: none;
+      width: 300px;
+      height: 300px;
+      margin-right: $large-space;
+      text-align: center;
+
+      figcaption {
+        font-size: 1.6rem;
+      }
+    }
+
+    .process-circle {
+      border-radius: 100%;
+      @include flexbox(column, center, center, null);
+      background-color: $placeholder-grey;
+
+      img {
+        max-width: 70%;
+      }
+    }
+  }
+}
