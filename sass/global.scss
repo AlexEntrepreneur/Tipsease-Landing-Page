@@ -7,6 +7,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
