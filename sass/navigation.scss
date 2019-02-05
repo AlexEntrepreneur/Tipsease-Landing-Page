@@ -4,7 +4,7 @@ header {
   height: 7rem;
   @include flexbox(null, null, center);
 
-  .container {
+  .row {
     @include flexbox(null, space-between, null);
 
     .header-menu-icon {
