@@ -114,3 +114,40 @@
     }
   }
 }
+
+.pricing-section {
+  position: relative;
+  background-color: $placeholder-light-grey;
+  z-index: 10;
+
+  .price-card {
+    background-color: white;
+    text-align: center;
+    padding: $medium-space;
+    margin-bottom: $large-space;
+    z-index: 10;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    .price-caption {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: $medium-space;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity : 0.1;
+    background-image: url('/assets/img/1488285.svg');
+    background-position: center;
+    background-size: 80%;
+    background-repeat:no-repeat;
+  }
+}
