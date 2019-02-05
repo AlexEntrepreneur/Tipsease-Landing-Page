@@ -45,6 +45,8 @@ p {
 
 a {
   font-size: 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -59,6 +61,12 @@ button {
     border: none;
     background-color: $tipsease-green;
     color: white;
+  }
+
+  &.btn-small {
+    padding: $small-space $medium-space;
+    font-size: 1.4rem;
+    min-height: unset;
   }
 }
 
