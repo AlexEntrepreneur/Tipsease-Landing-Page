@@ -1,3 +1,4 @@
+//====== Shared Styles ======//
 .section-heading {
   text-align: center;
   margin-top: $large-space;
@@ -7,6 +8,20 @@
 .section-subheading {
   margin-bottom: $small-space;
 }
+
+.h-scroll-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  @include flexbox(null, flex-start, center, null);
+  -webkit-overflow-scrolling: touch;
+
+  .h-scroll-item {
+    flex: none;
+    width: 100%;
+  }
+}
+
+//====== Section Styles ======//
 
 .hero-section {
   height: calc(230vw - 14rem);
@@ -84,15 +99,10 @@
 
 .process-section {
   .h-scroll-container {
-    overflow-x: scroll;
-    overflow-y: hidden;
     padding: $medium-space 0;
     padding-left: 8%;
-    @include flexbox(null, flex-start, center, null);
-    -webkit-overflow-scrolling: touch;
 
     .h-scroll-item {
-      flex: none;
       width: 300px;
       height: 300px;
       margin-right: 5.5rem;
@@ -169,6 +179,50 @@
 
     .app-store-btn {
       margin-right: $small-space;
+    }
+  }
+}
+
+.testimonials-section {
+  .h-scroll-item {
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+
+  figure {
+    height: (100vw / 4) * 3;
+    margin-bottom: $medium-space;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .quote-text-container {
+    max-width: 88%;
+    margin: 0 auto;
+    margin-bottom: $large-space;
+
+    .quote-mark {
+      font-size: 6.4rem;
+      line-height: 7.7rem;
+    }
+
+    .quote-text {
+      font-size: 2.4rem;
+    }
+
+    .quote-person, .quote-occupation {
+      display: inline;
+    }
+
+    .quote-person {
+      font-weight: bold;
+    }
+
+    .quote-occupation {
+      font-weight: normal;
     }
   }
 }
