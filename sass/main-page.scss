@@ -1,6 +1,15 @@
-.hero-container {
-  @include flexbox(column, null, center);
+.section-heading {
+  text-align: center;
+  margin-top: $large-space;
+  margin-bottom: $medium-space;
+}
 
+.section-subheading {
+  margin-bottom: $small-space;
+}
+
+.hero-section {
+  height: calc(230vw - 14rem);
   .hero-heading, .hero-subheading {
     text-align: center;
   }
@@ -24,6 +33,38 @@
 
     .hero-img {
       width: 88vw;
+    }
+  }
+}
+
+.how-section {
+  .how-step {
+    position: relative;
+    margin-bottom: $large-space;
+
+    img {
+      max-width: 60%;
+    }
+
+    .how-step-number {
+      position: absolute;
+      top: 0;
+      left: 25%;
+      transform: translateY(-20%);
+      font-size: 110vw;
+      z-index: -1;
+      opacity: .1;
+    }
+
+    &:nth-child(odd) {
+      img {
+        float: right;
+      }
+
+      .how-step-number {
+        left: initial;
+        right: 25%;
+      }
     }
   }
 }
