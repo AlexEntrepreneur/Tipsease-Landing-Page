@@ -148,6 +148,27 @@
     background-image: url('/assets/img/1488285.svg');
     background-position: center;
     background-size: 80%;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+  }
+}
+
+.download-section {
+  .section-heading {
+    margin-bottom: $normal-space;
+  }
+
+  .download-btn-container {
+    margin-bottom: $large-space;
+
+    button {
+      margin: 0;
+      border: none;
+      color: white;
+      background-color: black;
+    }
+
+    .app-store-btn {
+      margin-right: $small-space;
+    }
   }
 }
