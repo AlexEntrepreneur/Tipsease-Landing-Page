@@ -7,6 +7,11 @@ html {
   font-size: 62.5%;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: 3rem;
   margin-bottom: $normal-space;
@@ -62,4 +67,8 @@ button {
   &.padding-sides {
     padding: 0 4%;
   }
+}
+
+.main-content-container {
+  padding-top: 7rem;
 }

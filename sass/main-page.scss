@@ -8,4 +8,22 @@
   button {
     width: 20rem;
   }
+
+  .large-bg-circle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, calc(-7% - 7rem));
+    height: 230vw;
+    width: 230vw;
+    max-width: none;
+    border-radius: 100%;
+    background-color: $placeholder-grey;
+    z-index: -1;
+    @include flexbox(column, flex-end, center);
+    overflow-y: hidden;
+
+    .hero-img {
+      width: 88vw;
+    }
+  }
 }
