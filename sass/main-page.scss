@@ -86,7 +86,8 @@
   .h-scroll-container {
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: $medium-space 0 $medium-space  16%;
+    padding: $medium-space 0;
+    padding-left: 8%;
     @include flexbox(null, flex-start, center, null);
     -webkit-overflow-scrolling: touch;
 
@@ -94,7 +95,7 @@
       flex: none;
       width: 300px;
       height: 300px;
-      margin-right: $large-space;
+      margin-right: 5.5rem;
       text-align: center;
 
       figcaption {
