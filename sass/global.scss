@@ -55,6 +55,10 @@ a {
   font-size: 1.6rem;
   text-decoration: none;
   cursor: pointer;
+
+  @media #{$tablet} {
+    font-size: 1.8rem;
+  }
 }
 
 button {
@@ -123,6 +127,8 @@ button {
 
 .main-content-container {
   padding-top: $large-space;
+  margin: 0 auto;
+  max-width: $desktop-width;
 
   @media #{$tablet} {
     padding-top: $large-space * 2;

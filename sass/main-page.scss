@@ -43,7 +43,8 @@
     margin-bottom: $medium-space;
 
     button {
-      width: 100%;
+      width: 50%;
+      min-width: 210px;
 
       @media #{$tablet} {
         width: 210px;
