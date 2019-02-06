@@ -361,7 +361,8 @@
   .download-btn-container {
     margin-bottom: $large-space;
     width: 100%;
-    display: flex;
+    @include flexbox(row, center, null, null);
+
 
     button {
       width: 50%;
@@ -378,15 +379,45 @@
 }
 
 .testimonials-section {
-  background-color: $placeholder-grey;
+  .h-scroll-container {
+    background-color: $placeholder-grey;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      margin-top: 8px;
+      width: 100vw;
+      height: 400px;
+      z-index: -1;
+      background-color: $placeholder-grey;
+    }
+
+    @media #{$mobile-large} {
+      height: 400px;
+    }
+  }
 
   .h-scroll-item {
     border-right: 1px solid rgba(0,0,0,0.1);
+    height: 100%;
+
+    @media #{$mobile-large} {
+      @include flexbox(row);
+      border: unset;
+    }
   }
 
   figure {
     height: (100vw / 4) * 3;
     margin-bottom: $medium-space;
+
+    @media #{$mobile-large} {
+      height: 100%;
+      width: 300px;
+      margin-bottom: 0;
+    }
 
     img {
       height: 100%;
@@ -399,6 +430,13 @@
     max-width: 88%;
     margin: 0 auto;
     margin-bottom: $large-space;
+
+    @media #{$mobile-large} {
+      margin: auto;
+      height: max-content;
+      padding-left: $medium-space;
+      padding-right: $medium-space;
+    }
 
     .quote-mark {
       font-size: 6.4rem;
@@ -452,7 +490,7 @@
     transform: translate(-50%);
     width: 170%;
     height: calc(100% + 6rem);
-    z-index: -1;
+    z-index: -2;
     background-color: $placeholder-light-grey;
     border-radius: 100%;
   }

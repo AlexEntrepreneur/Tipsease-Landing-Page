@@ -71,6 +71,7 @@ button {
 
   @media #{$tablet} {
     font-size: 1.6rem;
+    max-width: 210px;
   }
 
   &.btn-primary {
