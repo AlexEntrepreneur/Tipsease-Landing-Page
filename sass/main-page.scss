@@ -248,11 +248,24 @@
     padding: $medium-space 0;
     padding-left: 8%;
 
+    @media #{$desktop} {
+      @include flexbox(column, null, center);
+      overflow-x: hidden;
+      padding: 0;
+      max-width: 60%;
+      margin-bottom: $medium-space;
+    }
+
     .h-scroll-item {
       width: 300px;
       height: 300px;
       margin-right: 5.5rem;
       text-align: center;
+
+      @media #{$desktop} {
+        margin-right: 0;
+        margin-bottom: $normal-space;
+      }
 
       figcaption {
         font-size: 1.6rem;
@@ -263,6 +276,17 @@
       border-radius: 100%;
       @include flexbox(column, center, center, null);
       background-color: $placeholder-grey;
+
+      @media #{$desktop} {
+        align-self: flex-start;
+
+        &:nth-child(odd) {
+          align-self: flex-end;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       img {
         max-width: 70%;
