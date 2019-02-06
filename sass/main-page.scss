@@ -63,9 +63,12 @@
     .how-step-number {
       position: absolute;
       top: 0;
-      left: 25%;
+      right: -8vh;
       transform: translateY(-20%);
-      font-size: 110vw;
+      text-align: right;
+      letter-spacing: -5vh;
+      font-size: 68vh;
+      line-height: 68vh;
       z-index: -1;
       opacity: .1;
     }
@@ -77,7 +80,8 @@
 
       .how-step-number {
         left: initial;
-        right: 25%;
+        text-align: left;
+        left: -8vh;
         margin: 0;
       }
     }
