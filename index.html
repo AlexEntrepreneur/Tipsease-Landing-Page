@@ -13,11 +13,9 @@
       </div>
     </div>
     <div id="mobileMenu">
-      <div class="top-container">
-        <div class="row padding-sides">
+      <div class="top-container padding-sides">
           <a class="header-logo menu"></a>
-          <i class="close-menu-icon"></i>
-        </div>
+          <a class="close-menu-icon">x</a>
       </div>
       <nav>
         <a href="#">Link 1</a>
@@ -27,11 +25,9 @@
       </nav>
       <button class="btn-primary btn-small no-margin">Log In</button>
     </div>
-    <header>
-      <div class="row padding-sides">
+    <header class="padding-sides">
         <a class="header-logo"></a>
         <i class="header-menu-icon"></i>
-      </div>
     </header>
     <div class="main-content-container">
 
@@ -40,8 +36,10 @@
       <section class="row hero-section">
         <h1 class="hero-heading">Main Value Proposition Statement</h1>
         <p class="hero-subheading">Sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
-        <button class="btn-primary">Get Started</button>
-        <button>Learn More &#9655;</button>
+        <div class="row hero-buttons">
+          <button class="btn-primary full-width">Get Started</button>
+          <button class="full-width">Learn More &#9655;</button>
+        </div>
         <div class="large-bg-circle">
           <img class="hero-img" src="assets/img/ptr.png" alt="">
         </div>
@@ -135,7 +133,7 @@
 
       <!-- PROCESS SECTION -->
 
-      <section class="process-section">
+      <section class="row process-section">
         <h1 class="section-heading">The Tipsease Process</h1>
         <div class="h-scroll-container full-width">
 

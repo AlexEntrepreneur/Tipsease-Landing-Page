@@ -25,12 +25,9 @@
 
 .hero-section {
   height: calc(230vw - 14rem);
+
   .hero-heading, .hero-subheading {
     text-align: center;
-  }
-
-  button {
-    width: 20rem;
   }
 
   .large-bg-circle {
@@ -284,7 +281,6 @@ footer {
 
   .footer-btns-container {
     @include flexbox(null, space-between, center, null);
-    width: 100%;
     margin-top: $medium-space;
     margin-bottom: $large-space;
 
@@ -293,25 +289,29 @@ footer {
       height: 30px;
     }
 
-    .social-icon {
-      padding: 0;
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      border: none;
-      background-color: white;
-      margin-left: $small-space;
+    .social-icon-container {
+      width: initial;
 
-      &.twitter::before {
-        content: 'T';
-      }
+      .social-icon {
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: none;
+        background-color: white;
+        margin-left: $small-space;
 
-      &.facebook::before {
-        content: 'F';
-      }
+        &.twitter::before {
+          content: 'T';
+        }
 
-      &.linkedin::before {
-        content: 'L';
+        &.facebook::before {
+          content: 'F';
+        }
+
+        &.linkedin::before {
+          content: 'L';
+        }
       }
     }
   }
@@ -321,12 +321,16 @@ footer {
     margin-bottom: $small-space;
   }
 
-  .footer-link {
-    text-decoration: underline;
-    margin-right: $small-space / 2;
-  }
-
   .copyright, .footer-link {
     font-size: $small-space;
+  }
+
+  .footer-links-container {
+    text-align: center;
+
+    .footer-link {
+      text-decoration: underline;
+      margin-right: $small-space / 2;
+    }
   }
 }
