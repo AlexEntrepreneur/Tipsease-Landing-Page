@@ -19,6 +19,10 @@ html, body {
 h1 {
   font-size: 3rem;
   margin-bottom: $normal-space;
+
+  @media #{$tablet} {
+    font-size: 6rem;
+  }
 }
 
 h2 {
@@ -41,6 +45,10 @@ p {
   font-size: 1.6rem;
   margin-bottom: $normal-space;
   width: 100%;
+
+  @media #{$tablet} {
+    font-size: 1.8rem;
+  }
 }
 
 a {
@@ -56,6 +64,10 @@ button {
   background-color: rgba(0,0,0,0);
   border: 1px solid black;
   margin-bottom: $normal-space;
+
+  @media #{$tablet} {
+    font-size: 1.6rem;
+  }
 
   &.btn-primary {
     border: none;
@@ -110,7 +122,11 @@ button {
 }
 
 .main-content-container {
-  padding-top: 7rem;
+  padding-top: $large-space;
+
+  @media #{$tablet} {
+    padding-top: $large-space * 2;
+  }
 }
 
 figure {

@@ -3,6 +3,10 @@
   text-align: center;
   margin-top: $large-space;
   margin-bottom: $medium-space;
+
+  @media #{$tablet} {
+    font-size: 3rem;
+  }
 }
 
 .section-subheading {
@@ -29,8 +33,22 @@
     text-align: center;
   }
 
+  .hero-subheading {
+    @media #{$tablet} {
+      margin-bottom: $medium-space;
+    }
+  }
+
   .hero-buttons {
     margin-bottom: $medium-space;
+
+    button {
+      width: 100%;
+
+      @media #{$tablet} {
+        width: 210px;
+      }
+    }
   }
 
   .hero-img img {
@@ -48,6 +66,10 @@
     border-radius: 100%;
     background-color: #313131;
     z-index: -1;
+
+    @media #{$tablet} {
+      max-height: 1000px;
+    }
   }
 }
 
