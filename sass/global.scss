@@ -60,6 +60,11 @@ button {
   &.btn-primary {
     border: none;
     background-color: $tipsease-green;
+    color: black;
+  }
+
+  &.btn-light {
+    border: 1px solid white;
     color: white;
   }
 
