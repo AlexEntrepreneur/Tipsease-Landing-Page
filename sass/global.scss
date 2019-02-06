@@ -110,6 +110,10 @@ button {
   & > * {
     // allows full width children
     max-width: 88%;
+
+    @media #{$desktop} {
+      max-width: 960px;
+    }
   }
 
   .full-width {

@@ -7,6 +7,10 @@
   @media #{$tablet} {
     font-size: 3rem;
   }
+
+  @media #{$desktop} {
+    margin-top: $large-space * 2;
+  }
 }
 
 .section-subheading {
@@ -23,6 +27,12 @@
     flex: none;
     width: 100%;
   }
+}
+
+.text-grid {
+    @media #{$desktop} {
+      @include flexbox(row, center, flex-start);
+    }
 }
 
 //====== Section Styles ======//
@@ -42,12 +52,22 @@
   .hero-buttons {
     margin-bottom: $medium-space;
 
+    @media #{$desktop} {
+      @include flexbox(row, center);
+    }
+
     button {
       width: 50%;
       min-width: 210px;
 
       @media #{$tablet} {
         width: 210px;
+      }
+      @media #{$desktop} {
+        margin-bottom: 0;
+        &.btn-primary {
+          margin-right: $normal-space;
+        }
       }
     }
   }
@@ -79,8 +99,30 @@
     position: relative;
     margin-bottom: $large-space;
 
+    @media #{$desktop} {
+      @include flexbox(null, space-between);
+      margin-bottom: $large-space * 2;
+    }
+
+    .text-conainer {
+      @media #{$desktop} {
+        max-width: 40%;
+      }
+    }
+
+    figure {
+      width: 60%;
+
+      @media #{$tablet} {
+        width: 50%;
+      }
+    }
+
+
     img {
-      max-width: 60%;
+      @media #{$desktop} {
+        max-width: 100%;
+      }
     }
 
     .how-step-number {
@@ -94,6 +136,18 @@
       line-height: 68vh;
       z-index: -1;
       opacity: .1;
+
+      @media #{$tablet} {
+        font-size: 60vh;
+        letter-spacing: -3vh;
+      }
+
+      @media #{$desktop} {
+        font-size: 56vh;
+        letter-spacing: normal;
+        right: 8vh;
+        text-align: left;
+      }
     }
 
     &:nth-child(odd) {
@@ -106,6 +160,18 @@
         text-align: left;
         left: -8vh;
         margin: 0;
+
+        @media #{$desktop} {
+          left: 8vh;
+          text-align: right;
+        }
+      }
+
+      figure {
+        float: right;
+        @media #{$desktop} {
+          order: -1;
+        }
       }
     }
   }
