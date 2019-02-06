@@ -300,6 +300,10 @@
   background-color: $placeholder-light-grey;
   z-index: 10;
 
+  @media #{$desktop} {
+    background-color: unset;
+  }
+
   .price-card {
     width: 60%;
     max-width: 340px;
@@ -319,17 +323,33 @@
     }
   }
 
-  &:after {
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/assets/img/1488285.png');
+    background-position: 0 calc(50% + #{$medium-space});
+    background-size: 20vh;
+    background-repeat: repeat-x;
+  }
+
+  &::after {
     content: '';
     position: absolute;
     display: block;
     width: 100%;
     height: 100%;
-    opacity : 0.1;
-    background-image: url('/assets/img/1488285.svg');
-    background-position: center 50%;
-    background-size: 50%;
-    background-repeat: no-repeat;
+
+    background-color: $placeholder-light-grey;
+    z-index: -2;
+    @media #{$desktop} {
+      height: 542px;
+      width: 100vw;
+    }
   }
 }
 
