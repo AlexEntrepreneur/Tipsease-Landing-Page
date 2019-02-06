@@ -112,7 +112,7 @@ button {
     max-width: 88%;
 
     @media #{$desktop} {
-      max-width: 960px;
+      max-width: $desktop-width;
     }
   }
 

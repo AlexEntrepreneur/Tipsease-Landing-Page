@@ -180,11 +180,65 @@
 .features-section {
   background-color: $placeholder-light-grey;
 
-  .feature-container {
-    margin-bottom: $medium-space;
+  @media #{$desktop} {
+    background-color: unset;
 
-    h3, p {
-      text-align: center;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 557px; // temporary solution
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background-color: $placeholder-light-grey;
+    }
+  }
+
+  .features-wrapper{
+    margin-bottom: $large-space;
+
+    @media #{$desktop} {
+      @include flexbox(row);
+    }
+
+    .feature-container {
+      margin-bottom: $medium-space;
+
+      @media #{$desktop} {
+        @include flexbox(column);
+        margin-bottom: 0;
+        margin-right: $medium-space;
+        padding: 0 $normal-space;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h3, p {
+        text-align: center;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        @media #{$desktop} {
+          max-width: 100%;
+        }
+      }
+
+      figure {
+        max-width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$desktop} {
+          max-width: 100%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
