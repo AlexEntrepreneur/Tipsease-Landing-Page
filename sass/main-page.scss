@@ -493,6 +493,12 @@
     z-index: -2;
     background-color: $placeholder-light-grey;
     border-radius: 100%;
+
+    @media #{$tablet} {
+      width: 200%;
+      height: 200%;
+      top: -100%;
+    }
   }
 }
 
@@ -503,6 +509,14 @@
   button {
     width: 100%;
     margin-bottom: $large-space;
+
+      @media #{$mobile-large} {
+        width: 70%;
+      }
+
+    @media #{$tablet} {
+      width: 210px;
+    }
   }
 }
 
