@@ -4,7 +4,7 @@ class Dropdown {
     this.button = this.component.querySelector('.dropdown-btn');
     this.optionsContainer = this.component.querySelector('.options-container');
     this.closeOptionsElement = this.optionsContainer.querySelector('.close-options-bg-layer');
-    this.optionsElements = Array.from(this.optionsContainer.getElementsByTagName('option'));
+    this.optionsElements = Array.from(this.optionsContainer.querySelectorAll('.option'));
     this.currentOption = this.optionsElements[0];
 
     this.selectOption(this.currentOption);

@@ -62,7 +62,7 @@ $option-bg-color: $placeholder-light-grey;
       padding: unset;
     }
 
-    option {
+    .option {
       font-weight: bold;
       line-height: $dropdown-height;
       background-color: $option-bg-color;

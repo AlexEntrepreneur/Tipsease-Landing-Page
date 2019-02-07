@@ -271,7 +271,6 @@
 
     .h-scroll-item {
       width: 300px;
-      height: 300px;
       margin-right: 5.5rem;
       text-align: center;
 
@@ -296,7 +295,7 @@
       border-radius: 100%;
       @include flexbox(column, center, center, null);
       background-color: $placeholder-grey;
-      // font-weight: bold;
+      height: 300px;
 
       @media #{$desktop} {
         align-self: flex-start;
@@ -339,6 +338,7 @@
 
       &.both {
         background: linear-gradient(45deg, #8251f5 0%,#36d995 90%);
+        color: white;
       }
     }
   }
