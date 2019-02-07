@@ -418,6 +418,11 @@
       border: none;
       color: white;
       background-color: black;
+      transition: all 250ms ease-in-out;
+
+      &:hover, &:active {
+        background-color: rgba(0,0,0,0.8);
+      }
     }
 
     .app-store-btn {
@@ -568,6 +573,11 @@ footer {
   color: white;
   padding-bottom: $large-space;
 
+  @media #{$desktop} {
+    padding-left: $normal-space;
+    padding-right: $normal-space;
+  }
+  
   .footer-btns-container {
     @include flexbox(null, space-between, center, null);
     margin-top: $medium-space;
@@ -591,16 +601,20 @@ footer {
         margin-left: $small-space;
         color: black;
 
+        &:hover, &:active {
+          background-color: rgba(255,255,255,0.8);
+        }
+
         &.twitter::before {
-          content: 'T';
+          content: url('../assets/img/twitter-black.svg');
         }
 
         &.facebook::before {
-          content: 'F';
+          content: url('../assets/img/facebook-black.svg');
         }
 
         &.linkedin::before {
-          content: 'L';
+          content: url('../assets/img/linkedin-black.svg');
         }
       }
     }

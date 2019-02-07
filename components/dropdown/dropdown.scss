@@ -19,7 +19,12 @@ $option-bg-color: $placeholder-light-grey;
     font-weight: bold;
     background-color: $dropdown-bg-color;
     border: none;
+    border-radius: 5px;
     @include flexbox(row, center);
+
+    &:hover {
+      background-color: darken($tipsease-green, 8%);
+    }
 
     .selected-value {
       line-height: $dropdown-height;
@@ -35,7 +40,7 @@ $option-bg-color: $placeholder-light-grey;
       @include flexbox(column, center);
 
       &::before {
-        content: 'v';
+        content: url('../assets/img/caret-down-black.svg');
       }
     }
   }
