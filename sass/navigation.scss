@@ -30,13 +30,20 @@ header {
     @include flexbox(row, space-between, center);
 
     .desktop-nav {
-      width: 50%;
+      max-width: 70%;
       text-align: right;
       display: none;
 
+      a, button {
+        margin-left: $medium-space;
+      }
+
       a {
         color: white;
-        margin-left: $medium-space;
+      }
+
+      button {
+        margin-bottom: 0;
       }
 
       @media #{$desktop} {
