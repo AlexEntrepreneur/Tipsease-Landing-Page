@@ -7,25 +7,34 @@
     <title></title>
   </head>
   <body>
+    <div id="loaderContainer" class="loader-component">
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
     <div id="mobileMenu">
-      <div class="top-container">
-        <div class="row padding-sides">
-          <a class="header-logo menu"></a>
-          <i class="close-menu-icon"></i>
-        </div>
+      <div class="top-container padding-sides">
+          <a href="/" class="header-logo menu"></a>
+          <a class="close-menu-icon">x</a>
       </div>
       <nav>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+        <a href="/">Link 1</a>
+        <a href="/">Link 2</a>
+        <a href="/">Link 3</a>
+        <a href="/">Link 4</a>
       </nav>
       <button class="btn-primary btn-small no-margin">Log In</button>
     </div>
-    <header>
-      <div class="row padding-sides">
-        <a class="header-logo"></a>
+    <header class="padding-sides">
+      <div class="header-content-container">
+        <a href="/" class="header-logo"></a>
         <i class="header-menu-icon"></i>
+        <nav class="desktop-nav">
+          <a href="/">Link 1</a>
+          <a href="/">Link 2</a>
+          <a href="/">Link 3</a>
+          <a href="/">Link 4</a>
+        </nav>
       </div>
     </header>
     <div class="main-content-container">
@@ -35,11 +44,13 @@
       <section class="row hero-section">
         <h1 class="hero-heading">Main Value Proposition Statement</h1>
         <p class="hero-subheading">Sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
-        <button class="btn-primary">Get Started</button>
-        <button>Learn More &#9655;</button>
-        <div class="large-bg-circle">
-          <img class="hero-img" src="assets/img/ptr.png" alt="">
+        <div class="row hero-buttons">
+          <button class="btn-primary">Get Started</button>
+          <button class="btn-light">Learn More &#9655;</button>
         </div>
+        <figure class="no-margin hero-img">
+          <img src="assets/img/ptr.png" alt="">
+        </figure>
       </section>
 
       <!-- HOW DOES IT WORK SECTION -->
@@ -49,8 +60,10 @@
 
         <!-- Step 1 -->
         <div class="text-grid how-step">
-          <h3 class="section-subheading">Plug In Your Accounts</h3>
-          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <div class="text-conainer">
+            <h3 class="section-subheading">Plug In Your Accounts</h3>
+            <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          </div>
           <figure>
             <img src="assets/img/ptr.png" alt="">
           </figure>
@@ -59,8 +72,10 @@
 
         <!-- Step 2 -->
         <div class="text-grid how-step">
-          <h3 class="section-subheading">Plug In Your Accounts</h3>
-          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <div class="text-conainer">
+            <h3 class="section-subheading">Plug In Your Accounts</h3>
+            <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          </div>
           <figure>
             <img src="assets/img/ptr.png" alt="">
           </figure>
@@ -69,8 +84,10 @@
 
         <!-- Step 3 -->
         <div class="text-grid how-step">
-          <h3 class="section-subheading">Plug In Your Accounts</h3>
-          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <div class="text-conainer">
+            <h3 class="section-subheading">Plug In Your Accounts</h3>
+            <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          </div>
           <figure>
             <img src="assets/img/ptr.png" alt="">
           </figure>
@@ -79,8 +96,10 @@
 
         <!-- Step 4 -->
         <div class="text-grid how-step">
-          <h3 class="section-subheading">Plug In Your Accounts</h3>
-          <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          <div class="text-conainer">
+            <h3 class="section-subheading">Plug In Your Accounts</h3>
+            <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
+          </div>
           <figure>
             <img src="assets/img/ptr.png" alt="">
           </figure>
@@ -93,44 +112,45 @@
 
       <section class="row features-section">
         <h1 class="section-heading">Key Features</h1>
+        <div class="features-wrapper">
+          <!-- Feature 1 -->
+          <div class="text-grid feature-container">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>
+              <h3 class="section-subheading">Secure</h3>
+              <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+            </figcaption>
+          </div>
 
-        <!-- Feature 1 -->
-        <div class="text-grid feature-container">
-          <figure>
-            <img src="assets/img/ls.png" alt="">
-          </figure>
-          <figcaption>
-            <h3 class="section-subheading">Secure</h3>
-            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
-          </figcaption>
-        </div>
+          <!-- Feature 2 -->
+          <div class="text-grid feature-container">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>
+              <h3 class="section-subheading">Peer-to-Peer</h3>
+              <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+            </figcaption>
+          </div>
 
-        <!-- Feature 2 -->
-        <div class="text-grid feature-container">
-          <figure>
-            <img src="assets/img/ls.png" alt="">
-          </figure>
-          <figcaption>
-            <h3 class="section-subheading">Peer-to-Peer</h3>
-            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
-          </figcaption>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="text-grid feature-container">
-          <figure>
-            <img src="assets/img/ls.png" alt="">
-          </figure>
-          <figcaption>
-            <h3 class="section-subheading">Instant</h3>
-            <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
-          </figcaption>
+          <!-- Feature 3 -->
+          <div class="text-grid feature-container">
+            <figure>
+              <img src="assets/img/ls.png" alt="">
+            </figure>
+            <figcaption>
+              <h3 class="section-subheading">Instant</h3>
+              <p>Mattis magna faucibus donec eu pellentesque sapien sed.</p>
+            </figcaption>
+          </div>
         </div>
       </section>
 
       <!-- PROCESS SECTION -->
 
-      <section class="process-section">
+      <section class="row process-section">
         <h1 class="section-heading">The Tipsease Process</h1>
         <div class="h-scroll-container full-width">
 
@@ -140,12 +160,19 @@
               <img src="assets/img/ls.png" alt="">
             </figure>
             <figcaption>Select Payment Method</p></figcaption>
-            <select class="dropdown process-dropdown">
-              <option value="">Contactless Card</option>
-              <option value="">Apple Pay</option>
-              <option value="">Google Pay</option>
-              <option value="">Bitcoin</option>
-            </select>
+            <div class="dropdown process-dropdown">
+              <button class="dropdown-btn">
+                <span class="selected-value"></span>
+                <span class="caret"></span>
+              </button>
+              <div class="options-container">
+                <option value="1">Contactless Card</option>
+                <option value="2">Apple Pay</option>
+                <option value="3">Google Pay</option>
+                <option value="4">Bitcoin</option>
+                <div class="close-options-bg-layer"></div>
+              </div>
+            </div>
           </div>
 
           <!-- Step 2 -->
@@ -209,6 +236,7 @@
       <!-- TESTIMONIALS SECTION -->
 
       <section class="testimonials-section">
+        <h1 class="section-heading">What Our Customers Say</h1>
         <div class="h-scroll-container full-width">
 
           <!-- Quote 1 -->
@@ -297,5 +325,7 @@
       </div>
     </footer>
     <script src="global.js" charset="utf-8"></script>
+    <script src="components/loader/loader.js" charset="utf-8"></script>
+    <script src="components/dropdown/dropdown.js" charset="utf-8"></script>
   </body>
 </html>

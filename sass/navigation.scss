@@ -4,11 +4,16 @@
   height: 3rem;
   content: url('/assets/img/633647.svg');
   cursor: pointer;
+  display: block;
+
+  @media #{$desktop} {
+    display: none;
+  }
 }
 
 .header-logo {
-  height: 3rem;
-  max-width: 30%;
+  max-width: 50%;
+  max-height: 60%;
   content: url('/assets/img/ls.png');
 }
 
@@ -17,11 +22,29 @@ header {
   position: absolute;
   width: 100%;
   height: 7rem;
-  @include flexbox(null, null, center);
 
-  .row {
-    @include flexbox(null, space-between, null);
+  .header-content-container{
+    height: 100%;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+
+    .desktop-nav {
+      width: 50%;
+      text-align: right;
+      display: none;
+
+      a {
+        color: white;
+        margin-left: $medium-space;
+      }
+
+      @media #{$desktop} {
+        display: block;
+      }
+    }
   }
+
 }
 
 #mobileMenu {
@@ -35,17 +58,12 @@ header {
 
   .top-container {
     height: $large-space;
-    @include flexbox(null, null, center);
+    @include flexbox(row, space-between, center);
 
-    .row {
-      @include flexbox(null, space-between, null);
-
-      .close-menu-icon {
-        height: 2.5rem;
-        padding: 2.5px;
-        cursor: pointer;
-        content: url('/assets/img/close.svg');
-      }
+    .close-menu-icon {
+      height: 2.5rem;
+      padding: 2.5px;
+      content: url('/assets/img/close.svg');
     }
   }
 

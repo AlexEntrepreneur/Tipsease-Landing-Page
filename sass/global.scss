@@ -19,6 +19,10 @@ html, body {
 h1 {
   font-size: 3rem;
   margin-bottom: $normal-space;
+
+  @media #{$tablet} {
+    font-size: 6rem;
+  }
 }
 
 h2 {
@@ -41,12 +45,20 @@ p {
   font-size: 1.6rem;
   margin-bottom: $normal-space;
   width: 100%;
+
+  @media #{$tablet} {
+    font-size: 1.8rem;
+  }
 }
 
 a {
   font-size: 1.6rem;
   text-decoration: none;
   cursor: pointer;
+
+  @media #{$tablet} {
+    font-size: 1.8rem;
+  }
 }
 
 button {
@@ -57,9 +69,19 @@ button {
   border: 1px solid black;
   margin-bottom: $normal-space;
 
+  @media #{$tablet} {
+    font-size: 1.6rem;
+    max-width: 210px;
+  }
+
   &.btn-primary {
     border: none;
     background-color: $tipsease-green;
+    color: black;
+  }
+
+  &.btn-light {
+    border: 1px solid white;
     color: white;
   }
 
@@ -78,32 +100,28 @@ button {
   margin: 0;
 }
 
+.padding-sides {
+  padding: 0 6%;
+}
+
 .row {
   width: 100%;
+  @include flexbox(column, null, center);
 
   & > * {
     // allows full width children
     max-width: 88%;
+
+    @media #{$desktop} {
+      max-width: $desktop-width;
+    }
   }
 
   .full-width {
     max-width: 100%;
   }
 
-  &.padding-sides {
-    padding: 0 4%;
-  }
-}
-
-.main-content-container {
-  padding-top: 7rem;
-}
-
-section {
-  @include flexbox(column, null, center);
-
-  h1, h2, h3, h4, h5, h6 {
-    display: block;
+  h1, h2, h3, h4, h5, h6, div, section, figure, figcaption, button {
     width: 100%;
   }
 
@@ -112,17 +130,17 @@ section {
   }
 }
 
+.main-content-container {
+  padding-top: $large-space;
+  margin: 0 auto;
+  max-width: $desktop-width;
+
+  @media #{$tablet} {
+    padding-top: $large-space * 2;
+  }
+}
+
 figure {
   margin: 0;
   margin-bottom: $normal-space;
-}
-
-.dropdown {
-  height: 50px;
-  width: 100%;
-  padding: $small-space 5rem;
-  font-size: 1.6rem;
-  background-color: $placeholder-light-grey;
-  border: none;
-  border-radius: 0;
 }

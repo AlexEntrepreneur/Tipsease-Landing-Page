@@ -1,0 +1,93 @@
+//====== VARIABLES ======//
+$dropdown-height: 5rem;
+$dropdown-bg-color: $tipsease-green;
+$option-bg-color: $placeholder-light-grey;
+
+
+//==== COMPONENT STYLES ======//
+.dropdown {
+  position: relative;
+  font-size: 1.6rem;
+
+  button {
+    position: relative;
+    height: $dropdown-height;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: $dropdown-bg-color;
+    border: none;
+    @include flexbox(row, center);
+
+    .selected-value {
+      line-height: $dropdown-height;
+    }
+
+    .caret {
+      top: 0;
+      display: inline-block;
+      vertical-align: middle;
+      height: $dropdown-height;
+      position: absolute;
+      right: $normal-space;
+      @include flexbox(column, center);
+
+      &::before {
+        content: 'v';
+      }
+    }
+  }
+
+  .options-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: inherit;
+    z-index: 100;
+    display: none;
+
+    @media #{$tablet} {
+      bottom: $medium-space;
+      left: 0;
+      margin: 0 auto;
+      padding: 0 $medium-space;
+    }
+
+    @media #{$desktop} {
+      position: absolute;
+      top: 0;
+      padding: unset;
+    }
+
+    option {
+      font-weight: bold;
+      line-height: $dropdown-height;
+      background-color: $option-bg-color;
+      font-size: inherit;
+      padding: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($option-bg-color, 5%);
+      }
+    }
+    .close-options-bg-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      z-index: -1;
+      background-color: rgba(0,0,0,0.5);
+
+      @media #{$desktop} {
+        background-color: unset;
+      }
+    }
+  }
+}

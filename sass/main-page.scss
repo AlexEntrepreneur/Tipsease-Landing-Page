@@ -3,6 +3,14 @@
   text-align: center;
   margin-top: $large-space;
   margin-bottom: $medium-space;
+
+  @media #{$tablet} {
+    font-size: 3rem;
+  }
+
+  @media #{$desktop} {
+    margin-top: $large-space * 2;
+  }
 }
 
 .section-subheading {
@@ -21,33 +29,67 @@
   }
 }
 
-//====== Section Styles ======//
+.text-grid {
+    @media #{$desktop} {
+      @include flexbox(row, center, flex-start);
+    }
+}
 
+//====== Section Styles ======//
 .hero-section {
-  height: calc(230vw - 14rem);
+  color: white;
+
   .hero-heading, .hero-subheading {
     text-align: center;
   }
 
-  button {
-    width: 20rem;
+  .hero-subheading {
+    @media #{$tablet} {
+      margin-bottom: $medium-space;
+    }
   }
 
-  .large-bg-circle {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, calc(-7% - 7rem));
-    height: 230vw;
-    width: 230vw;
-    max-width: none;
-    border-radius: 100%;
-    background-color: $placeholder-grey;
-    z-index: -1;
-    @include flexbox(column, flex-end, center);
-    overflow-y: hidden;
+  .hero-buttons {
+    margin-bottom: $medium-space;
 
-    .hero-img {
-      width: 88vw;
+    @media #{$desktop} {
+      @include flexbox(row, center);
+    }
+
+    button {
+      width: 50%;
+      min-width: 210px;
+
+      @media #{$tablet} {
+        width: 210px;
+      }
+      @media #{$desktop} {
+        margin-bottom: 0;
+        &.btn-primary {
+          margin-right: $normal-space;
+        }
+      }
+    }
+  }
+
+  .hero-img img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -#{$large-space};
+    height: 120%;
+    max-height: 780px;
+    width: 290%;
+    border-radius: 100%;
+    background-color: #313131;
+    z-index: -1;
+
+    @media #{$tablet} {
+      max-height: 1000px;
     }
   }
 }
@@ -57,18 +99,55 @@
     position: relative;
     margin-bottom: $large-space;
 
+    @media #{$desktop} {
+      @include flexbox(null, space-between);
+      margin-bottom: $large-space * 2;
+    }
+
+    .text-conainer {
+      @media #{$desktop} {
+        max-width: 40%;
+      }
+    }
+
+    figure {
+      width: 60%;
+
+      @media #{$tablet} {
+        width: 50%;
+      }
+    }
+
+
     img {
-      max-width: 60%;
+      @media #{$desktop} {
+        max-width: 100%;
+      }
     }
 
     .how-step-number {
       position: absolute;
       top: 0;
-      left: 25%;
+      right: -8vh;
       transform: translateY(-20%);
-      font-size: 110vw;
+      text-align: right;
+      letter-spacing: -5vh;
+      font-size: 68vh;
+      line-height: 68vh;
       z-index: -1;
       opacity: .1;
+
+      @media #{$tablet} {
+        font-size: 60vh;
+        letter-spacing: -3vh;
+      }
+
+      @media #{$desktop} {
+        font-size: 56vh;
+        letter-spacing: normal;
+        right: 8vh;
+        text-align: left;
+      }
     }
 
     &:nth-child(odd) {
@@ -78,8 +157,21 @@
 
       .how-step-number {
         left: initial;
-        right: 25%;
+        text-align: left;
+        left: -8vh;
         margin: 0;
+
+        @media #{$desktop} {
+          left: 8vh;
+          text-align: right;
+        }
+      }
+
+      figure {
+        float: right;
+        @media #{$desktop} {
+          order: -1;
+        }
       }
     }
   }
@@ -88,11 +180,65 @@
 .features-section {
   background-color: $placeholder-light-grey;
 
-  .feature-container {
-    margin-bottom: $medium-space;
+  @media #{$desktop} {
+    background-color: unset;
 
-    h3, p {
-      text-align: center;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 557px; // temporary solution
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background-color: $placeholder-light-grey;
+    }
+  }
+
+  .features-wrapper{
+    margin-bottom: $large-space;
+
+    @media #{$desktop} {
+      @include flexbox(row);
+    }
+
+    .feature-container {
+      margin-bottom: $medium-space;
+
+      @media #{$desktop} {
+        @include flexbox(column);
+        margin-bottom: 0;
+        margin-right: $medium-space;
+        padding: 0 $normal-space;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h3, p {
+        text-align: center;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        @media #{$desktop} {
+          max-width: 100%;
+        }
+      }
+
+      figure {
+        max-width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$desktop} {
+          max-width: 100%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -102,11 +248,24 @@
     padding: $medium-space 0;
     padding-left: 8%;
 
+    @media #{$desktop} {
+      @include flexbox(column, null, center);
+      overflow-x: hidden;
+      padding: 0;
+      max-width: 60%;
+      margin-bottom: $medium-space;
+    }
+
     .h-scroll-item {
       width: 300px;
       height: 300px;
       margin-right: 5.5rem;
       text-align: center;
+
+      @media #{$desktop} {
+        margin-right: 0;
+        margin-bottom: $normal-space;
+      }
 
       figcaption {
         font-size: 1.6rem;
@@ -117,6 +276,17 @@
       border-radius: 100%;
       @include flexbox(column, center, center, null);
       background-color: $placeholder-grey;
+
+      @media #{$desktop} {
+        align-self: flex-start;
+
+        &:nth-child(odd) {
+          align-self: flex-end;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       img {
         max-width: 70%;
@@ -130,12 +300,19 @@
   background-color: $placeholder-light-grey;
   z-index: 10;
 
+  @media #{$desktop} {
+    background-color: unset;
+  }
+
   .price-card {
-    background-color: white;
-    text-align: center;
+    width: 60%;
+    max-width: 340px;
+    min-width: 190px;
     padding: $medium-space;
     margin-bottom: $large-space;
     z-index: 10;
+    text-align: center;
+    background-color: white;
 
     h1 {
       font-size: 5rem;
@@ -146,19 +323,33 @@
     }
   }
 
-  &:after {
+  &::before {
     content: '';
     position: absolute;
     display: block;
-    top: $medium-space;
-    left: 0;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/assets/img/1488285.png');
+    background-position: 0 calc(50% + #{$medium-space});
+    background-size: 20vh;
+    background-repeat: repeat-x;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
     width: 100%;
     height: 100%;
-    opacity : 0.1;
-    background-image: url('/assets/img/1488285.svg');
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
+
+    background-color: $placeholder-light-grey;
+    z-index: -2;
+    @media #{$desktop} {
+      height: 542px;
+      width: 100vw;
+    }
   }
 }
 
@@ -170,7 +361,8 @@
   .download-btn-container {
     margin-bottom: $large-space;
     width: 100%;
-    display: flex;
+    @include flexbox(row, center, null, null);
+
 
     button {
       width: 50%;
@@ -187,15 +379,45 @@
 }
 
 .testimonials-section {
-  background-color: $placeholder-grey;
+  .h-scroll-container {
+    background-color: $placeholder-grey;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      margin-top: 8px;
+      width: 100vw;
+      height: 400px;
+      z-index: -1;
+      background-color: $placeholder-grey;
+    }
+
+    @media #{$mobile-large} {
+      height: 400px;
+    }
+  }
 
   .h-scroll-item {
     border-right: 1px solid rgba(0,0,0,0.1);
+    height: 100%;
+
+    @media #{$mobile-large} {
+      @include flexbox(row);
+      border: unset;
+    }
   }
 
   figure {
     height: (100vw / 4) * 3;
     margin-bottom: $medium-space;
+
+    @media #{$mobile-large} {
+      height: 100%;
+      width: 300px;
+      margin-bottom: 0;
+    }
 
     img {
       height: 100%;
@@ -208,6 +430,13 @@
     max-width: 88%;
     margin: 0 auto;
     margin-bottom: $large-space;
+
+    @media #{$mobile-large} {
+      margin: auto;
+      height: max-content;
+      padding-left: $medium-space;
+      padding-right: $medium-space;
+    }
 
     .quote-mark {
       font-size: 6.4rem;
@@ -256,14 +485,20 @@
   &::after {
     content: '';
     position: absolute;
-    top: -46vw;
+    top: -6rem;
     left: 50%;
-    transform: translateX(-50%);
-    width: 230vw;
-    height: 140vw;
-    z-index: -1;
+    transform: translate(-50%);
+    width: 170%;
+    height: calc(100% + 6rem);
+    z-index: -2;
     background-color: $placeholder-light-grey;
     border-radius: 100%;
+
+    @media #{$tablet} {
+      width: 200%;
+      height: 200%;
+      top: -100%;
+    }
   }
 }
 
@@ -274,6 +509,14 @@
   button {
     width: 100%;
     margin-bottom: $large-space;
+
+      @media #{$mobile-large} {
+        width: 70%;
+      }
+
+    @media #{$tablet} {
+      width: 210px;
+    }
   }
 }
 
@@ -284,7 +527,6 @@ footer {
 
   .footer-btns-container {
     @include flexbox(null, space-between, center, null);
-    width: 100%;
     margin-top: $medium-space;
     margin-bottom: $large-space;
 
@@ -293,25 +535,29 @@ footer {
       height: 30px;
     }
 
-    .social-icon {
-      padding: 0;
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      border: none;
-      background-color: white;
-      margin-left: $small-space;
+    .social-icon-container {
+      width: initial;
 
-      &.twitter::before {
-        content: 'T';
-      }
+      .social-icon {
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: none;
+        background-color: white;
+        margin-left: $small-space;
 
-      &.facebook::before {
-        content: 'F';
-      }
+        &.twitter::before {
+          content: 'T';
+        }
 
-      &.linkedin::before {
-        content: 'L';
+        &.facebook::before {
+          content: 'F';
+        }
+
+        &.linkedin::before {
+          content: 'L';
+        }
       }
     }
   }
@@ -321,12 +567,16 @@ footer {
     margin-bottom: $small-space;
   }
 
-  .footer-link {
-    text-decoration: underline;
-    margin-right: $small-space / 2;
-  }
-
   .copyright, .footer-link {
     font-size: $small-space;
+  }
+
+  .footer-links-container {
+    text-align: center;
+
+    .footer-link {
+      text-decoration: underline;
+      margin-right: $small-space / 2;
+    }
   }
 }

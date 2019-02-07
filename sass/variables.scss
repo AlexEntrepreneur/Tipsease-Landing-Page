@@ -6,6 +6,15 @@ $large-space: 70px;
 
 //====== COLOR VARIABLES ======//
 $tipsease-green: #36D995;
-$tipseas-purple: #8251F5;
+$tipsease-purple: #8251F5;
 $placeholder-grey: #D8D8D8;
 $placeholder-light-grey: #F3F3F3;
+
+//====== MEDIA QUERY VARIABLES ======//
+$mobile-large-width: 600px;
+$tablet-width: 800px;
+$desktop-width: 980px;
+
+$mobile-large: 'screen and (min-width: #{$mobile-large-width})';
+$tablet: 'screen and (min-width: #{$tablet-width})';
+$desktop: 'screen and (min-width: #{$desktop-width})';
