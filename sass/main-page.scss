@@ -380,7 +380,7 @@
     width: 100vw;
     height: 100%;
     z-index: -1;
-    background-image: url('/assets/img/1488285.png');
+    background-image: url('../assets/img/1488285.png');
     background-position: 0 calc(50% + #{$medium-space});
     background-size: 20vh;
     background-repeat: repeat-x;
@@ -582,7 +582,7 @@ footer {
     margin-bottom: $large-space;
 
     .footer-logo {
-      content: url('/assets/img/logo-white.png');
+      content: url('../assets/img/logo-white.png');
       height: 30px;
     }
 
@@ -597,6 +597,7 @@ footer {
         border: none;
         background-color: white;
         margin-left: $small-space;
+        color: black;
 
         &.twitter::before {
           content: 'T';
