@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="320px" viewBox="0 0 512 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-975.000000, -661.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Logo" transform="translate(975.000000, 0.000000)">
+                <g id="menu" transform="translate(0.000000, 661.000000)">
+                    <path d="M501.333,0 L10.667,0 C4.779,0 0,4.779 0,10.667 C0,16.555 4.779,21.334 10.667,21.334 L501.334,21.334 C507.222,21.334 512.001,16.555 512.001,10.667 C512.001,4.779 507.221,0 501.333,0 Z" id="Shape"></path>
+                    <path d="M501.333,149.333 L10.667,149.333 C4.779,149.333 0,154.112 0,160 C0,165.888 4.779,170.667 10.667,170.667 L501.334,170.667 C507.222,170.667 512.001,165.888 512.001,160 C512.001,154.112 507.221,149.333 501.333,149.333 Z" id="Shape"></path>
+                    <path d="M501.333,298.667 L10.667,298.667 C4.779,298.667 0,303.445 0,309.333 C0,315.221 4.779,320 10.667,320 L501.334,320 C507.222,320 512.001,315.221 512.001,309.333 C512,303.445 507.221,298.667 501.333,298.667 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
