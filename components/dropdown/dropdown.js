@@ -35,7 +35,7 @@ class Dropdown {
     const optionText = option.textContent;
 
     buttonText.textContent = optionText;
-    this.component.dataset.selected = option.value;
+    this.component.dataset.selected = option.dataset.value;
     this.hideOptions();
   }
 }
