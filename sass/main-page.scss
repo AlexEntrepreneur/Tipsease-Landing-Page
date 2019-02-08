@@ -301,14 +301,17 @@
 
         &.customer {
           align-self: flex-end;
+          animation: float 2.9s ease-in-out infinite;
         }
 
         &.you {
           align-self: flex-start;
+          animation: float 3s ease-in-out infinite;
         }
 
         &.both {
           align-self: center;
+          animation: float 3.1s ease-in-out infinite;
         }
 
         &:last-child {
