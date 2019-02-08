@@ -128,13 +128,13 @@
 
     .how-step-number {
       position: absolute;
-      top: 0;
+      top: -16vh;
       right: -8vh;
       transform: translateY(-20%);
       text-align: right;
-      letter-spacing: -5vh;
-      font-size: 68vh;
-      line-height: 68vh;
+      letter-spacing: -5vw;
+      font-size: 50vh;
+      line-height: 43vh;
       color: $tipsease-green;
       z-index: -1;
       opacity: .2;
