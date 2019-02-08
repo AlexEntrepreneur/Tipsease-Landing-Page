@@ -95,7 +95,7 @@
 }
 
 .how-section {
-  display: none;
+  // display: none;
   .how-step {
     position: relative;
     margin-bottom: $large-space;
@@ -105,7 +105,7 @@
       margin-bottom: $large-space * 2;
     }
 
-    .text-conainer {
+    .text-container {
       @media #{$desktop} {
         max-width: 40%;
       }
@@ -577,7 +577,7 @@ footer {
     padding-left: $normal-space;
     padding-right: $normal-space;
   }
-  
+
   .footer-btns-container {
     @include flexbox(null, space-between, center, null);
     margin-top: $medium-space;

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title></title>
+    <title>Tipsease - Home</title>
   </head>
   <body>
     <div id="loaderContainer" class="loader-component">
@@ -49,7 +49,7 @@
           <button class="btn-primary">Get Started</button>
           <button class="btn-light">Learn More &#9655;</button>
         </div>
-        <figure class="no-margin hero-img">
+        <figure class="no-margin hero-img" data-entrance="from-top">
           <img src="assets/img/main-ui.png" alt="">
         </figure>
       </section>
@@ -61,7 +61,7 @@
 
         <!-- Step 1 -->
         <div class="text-grid how-step">
-          <div class="text-conainer">
+          <div class="text-container">
             <h3 class="section-subheading">Plug In Your Accounts</h3>
             <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
           </div>
@@ -73,7 +73,7 @@
 
         <!-- Step 2 -->
         <div class="text-grid how-step">
-          <div class="text-conainer">
+          <div class="text-container">
             <h3 class="section-subheading">Plug In Your Accounts</h3>
             <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
           </div>
@@ -85,7 +85,7 @@
 
         <!-- Step 3 -->
         <div class="text-grid how-step">
-          <div class="text-conainer">
+          <div class="text-container">
             <h3 class="section-subheading">Plug In Your Accounts</h3>
             <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
           </div>
@@ -97,7 +97,7 @@
 
         <!-- Step 4 -->
         <div class="text-grid how-step">
-          <div class="text-conainer">
+          <div class="text-container">
             <h3 class="section-subheading">Plug In Your Accounts</h3>
             <p>Sed sagittis sapien quis lacus laoreet, sed mattis magna faucibus. Donec eu pellentesque sapien. Sed.</p>
           </div>
@@ -115,7 +115,7 @@
         <h1 class="section-heading">Key Features</h1>
         <div class="features-wrapper">
           <!-- Feature 1 -->
-          <div class="text-grid feature-container">
+          <div class="text-grid feature-container" data-entrance="fade">
             <figure>
               <img src="assets/img/secure.png" alt="">
             </figure>
@@ -126,7 +126,7 @@
           </div>
 
           <!-- Feature 2 -->
-          <div class="text-grid feature-container">
+          <div class="text-grid feature-container" data-entrance="fade" data-entrance-delay="250">
             <figure>
               <img src="assets/img/p-2-p.png" alt="">
             </figure>
@@ -137,7 +137,7 @@
           </div>
 
           <!-- Feature 3 -->
-          <div class="text-grid feature-container">
+          <div class="text-grid feature-container"  data-entrance="fade" data-entrance-delay="500">
             <figure>
               <img src="assets/img/lightning.png" alt="">
             </figure>
@@ -183,7 +183,7 @@
 
       <section class="row pricing-section">
         <h1 class="section-heading">Pricing</h1>
-        <div class="price-card">
+        <div class="price-card" data-entrance="from-top">
           <h1 class="no-margin">1%</h1>
           <p class="price-caption">of every transaction</p>
           <p class="price-benefit no-margin">No Extra Fees</p>
@@ -252,19 +252,19 @@
       <!-- STATISTICS SECTION -->
 
       <section class="row stats-section">
-        <div class="stat-container">
+        <div class="stat-container" data-entrance="fade">
           <h1 class="stat no-margin">321</h1>
           <p class="stat-title">Some stat goes here</p>
         </div>
-        <div class="stat-container">
+        <div class="stat-container" data-entrance="fade" data-entrance-delay="250">
           <h1 class="stat no-margin">321</h1>
           <p class="stat-title">Some stat goes here</p>
         </div>
-        <div class="stat-container">
+        <div class="stat-container" data-entrance="fade">
           <h1 class="stat no-margin">321</h1>
           <p class="stat-title">Some stat goes here</p>
         </div>
-        <div class="stat-container">
+        <div class="stat-container" data-entrance="fade" data-entrance-delay="250">
           <h1 class="stat no-margin">321</h1>
           <p class="stat-title">Some stat goes here</p>
         </div>
@@ -273,8 +273,8 @@
       <!-- CTA SECTION -->
 
       <section class="row cta-section">
-        <h3 class="section-heading">Take your service to the next level with Tipsease.</h3>
-        <button class="btn-primary">Sign Up</button>
+        <h3 class="section-heading" data-entrance="fade">Take your service to the next level with Tipsease.</h3>
+        <button class="btn-primary" data-entrance="from-top" data-entrance-delay="250">Sign Up</button>
       </section>
     </div>
 
@@ -299,4 +299,5 @@
     <script src="components/process-steps/process-section-data.js" charset="utf-8"></script>
     <script src="components/process-steps/process-steps.js" charset="utf-8"></script>
   </body>
+  <script src="js/scroll-entrance.js" charset="utf-8"></script>
 </html>

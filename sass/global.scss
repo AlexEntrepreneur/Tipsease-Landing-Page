@@ -165,3 +165,7 @@ figure {
   margin: 0;
   margin-bottom: $normal-space;
 }
+
+[data-entrance] {
+  visibility: hidden;
+}
