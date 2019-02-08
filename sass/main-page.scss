@@ -288,7 +288,9 @@
 
 
       figcaption {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        font-weight: 500;
       }
     }
 
@@ -298,6 +300,8 @@
       background-color: $placeholder-grey;
       height: 300px;
       box-shadow: 0 .5rem 3.5rem rgba(0,0,0,0.3);
+      font-weight: 500;
+      padding: $normal-space;
 
       @media #{$desktop} {
         align-self: flex-start;
@@ -323,10 +327,6 @@
         max-width: 70%;
         max-height: 100%;
         display: none;
-      }
-
-      figcaption {
-        font-size: 2.5rem;
       }
 
       &.you {
@@ -435,13 +435,15 @@
 .testimonials-section {
   .h-scroll-container {
     background-color: $tipsease-green;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &::after {
       content: '';
       position: absolute;
       display: block;
       left: 0;
-      margin-top: 8px;
       width: 100vw;
       height: 400px;
       z-index: -1;
@@ -477,6 +479,7 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -488,6 +491,7 @@
     @media #{$mobile-large} {
       margin: auto;
       height: max-content;
+      max-width: 600px;
       padding-left: $medium-space;
       padding-right: $medium-space;
     }
@@ -499,7 +503,7 @@
     }
 
     .quote-text {
-      font-size: 2.4rem;
+      font-size: 3rem;
       font-weight: bold;
     }
 
