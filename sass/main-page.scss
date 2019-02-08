@@ -262,9 +262,10 @@
       @include flexbox(column, null, center);
       overflow-x: visible;
       overflow-y: hidden;
-      padding: 0 $normal-space;
+      padding: 0 $medium-space;
+      padding-bottom: $medium-space;
       min-height: 500px;
-      max-width: calc(60% + #{$normal-space});
+      max-width: calc(60% + #{$medium-space});
       margin-bottom: $medium-space;
     }
 
