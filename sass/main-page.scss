@@ -417,16 +417,11 @@
     @include flexbox(row, center, null, null);
 
 
-    button {
-      width: 50%;
-      margin: 0;
-      border: none;
-      color: white;
-      background-color: black;
-      transition: all 250ms ease-in-out;
+    a img {
+      max-height: 5rem;
 
-      &:hover, &:active {
-        background-color: rgba(0,0,0,0.8);
+      @media #{$tablet} {
+        max-height: 6rem;
       }
     }
 
