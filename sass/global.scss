@@ -9,6 +9,7 @@ html {
 
 body {
   overflow-y: hidden;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 html, body {
@@ -58,6 +59,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: all 250ms ease-in-out;
+  font-weight: 500;
 
   &:hover, &:active {
     opacity: 0.8;
@@ -78,6 +80,7 @@ button {
   border-radius: $large-space;
   transition: all 250ms ease-in-out;
   box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.2);
+  font-weight: 500;
 
   &:hover, &:active {
     background-color: rgba(0,0,0,0.1);
