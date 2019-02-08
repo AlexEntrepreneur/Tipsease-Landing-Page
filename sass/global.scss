@@ -18,6 +18,8 @@ html, body {
 
 h1 {
   font-size: 3rem;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
   margin-bottom: $normal-space;
 
   @media #{$tablet} {
