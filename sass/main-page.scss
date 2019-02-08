@@ -301,17 +301,14 @@
 
         &.customer {
           align-self: flex-end;
-          animation: float 2.9s ease-in-out infinite;
         }
 
         &.you {
           align-self: flex-start;
-          animation: float 3s ease-in-out infinite;
         }
 
         &.both {
           align-self: center;
-          animation: float 3.1s ease-in-out infinite;
         }
 
         &:last-child {
@@ -331,16 +328,19 @@
 
       &.you {
         background-color: $tipsease-green;
+        animation: float 3s ease-in-out infinite;
       }
 
       &.customer {
         background-color: $tipsease-purple;
         color: white;
+        animation: float 2.9s ease-in-out infinite;
       }
 
       &.both {
         background: linear-gradient(45deg, #8251f5 0%,#36d995 90%);
         color: white;
+        animation: float 3.1s ease-in-out infinite;
       }
     }
   }
