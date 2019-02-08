@@ -260,11 +260,11 @@
 
     @media #{$desktop} {
       @include flexbox(column, null, center);
-      overflow-x: hidden;
+      overflow-x: visible;
       overflow-y: hidden;
-      padding: 0;
+      padding: 0 $normal-space;
       min-height: 500px;
-      max-width: 60%;
+      max-width: calc(60% + #{$normal-space});
       margin-bottom: $medium-space;
     }
 
@@ -295,6 +295,7 @@
       @include flexbox(column, center, center, null);
       background-color: $placeholder-grey;
       height: 300px;
+      box-shadow: 0 .5rem 3.5rem rgba(0,0,0,0.3);
 
       @media #{$desktop} {
         align-self: flex-start;

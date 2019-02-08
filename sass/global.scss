@@ -77,10 +77,12 @@ button {
   margin-bottom: $normal-space;
   border-radius: $large-space;
   transition: all 250ms ease-in-out;
+  box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.2);
 
   &:hover, &:active {
     background-color: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0.5rem .7rem rgba(0, 0, 0, 0.2);
   }
 
   @media #{$tablet} {
