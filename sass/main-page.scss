@@ -44,6 +44,7 @@
   }
 
   .hero-subheading {
+    font-weight: 500;
     @media #{$tablet} {
       margin-bottom: $medium-space;
     }
@@ -79,24 +80,23 @@
 
   &::after {
     content: '';
+    background: url('../assets/img/header-bg.png') center center no-repeat;
+    background-size: 100% 100%;
     position: absolute;
     top: -#{$large-space};
-    height: 120%;
+    height: 100%;
     max-height: 780px;
-    width: 290%;
-    border-radius: 100%;
-    background-color: darken(desaturate($tipsease-purple, 15%), 10%);
-
+    width: 100%;
     z-index: -1;
 
     @media #{$tablet} {
-      max-height: 1000px;
+      max-height: 830px;
     }
   }
 }
 
 .how-section {
-  display: none;
+  // display: none;
   .how-step {
     position: relative;
     margin-bottom: $large-space;
@@ -106,7 +106,7 @@
       margin-bottom: $large-space * 2;
     }
 
-    .text-conainer {
+    .text-container {
       @media #{$desktop} {
         max-width: 40%;
       }
@@ -129,13 +129,13 @@
 
     .how-step-number {
       position: absolute;
-      top: 0;
+      top: -16vh;
       right: -8vh;
       transform: translateY(-20%);
       text-align: right;
-      letter-spacing: -5vh;
-      font-size: 68vh;
-      line-height: 68vh;
+      letter-spacing: -5vw;
+      font-size: 50vh;
+      line-height: 43vh;
       color: $tipsease-green;
       z-index: -1;
       opacity: .2;
@@ -261,17 +261,17 @@
 
     @media #{$desktop} {
       @include flexbox(column, null, center);
-      overflow-x: hidden;
+      overflow-x: visible;
       overflow-y: hidden;
-      padding: 0;
+      padding: 0 $medium-space;
+      padding-bottom: $medium-space;
       min-height: 500px;
-      max-width: 60%;
+      max-width: calc(60% + #{$medium-space});
       margin-bottom: $medium-space;
     }
 
     .h-scroll-item {
       width: 300px;
-      height: 300px;
       margin-right: 5.5rem;
       text-align: center;
 
@@ -288,7 +288,9 @@
 
 
       figcaption {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        font-weight: 500;
       }
     }
 
@@ -296,7 +298,10 @@
       border-radius: 100%;
       @include flexbox(column, center, center, null);
       background-color: $placeholder-grey;
-      // font-weight: bold;
+      height: 300px;
+      box-shadow: 0 .5rem 3.5rem rgba(0,0,0,0.3);
+      font-weight: 500;
+      padding: $normal-space;
 
       @media #{$desktop} {
         align-self: flex-start;
@@ -324,21 +329,21 @@
         display: none;
       }
 
-      figcaption {
-        font-size: 2.5rem;
-      }
-
       &.you {
         background-color: $tipsease-green;
+        animation: float 3s ease-in-out infinite;
       }
 
       &.customer {
         background-color: $tipsease-purple;
         color: white;
+        animation: float 2.9s ease-in-out infinite;
       }
 
       &.both {
         background: linear-gradient(45deg, #8251f5 0%,#36d995 90%);
+        color: white;
+        animation: float 3.1s ease-in-out infinite;
       }
     }
   }
@@ -413,12 +418,12 @@
     @include flexbox(row, center, null, null);
 
 
-    button {
-      width: 50%;
-      margin: 0;
-      border: none;
-      color: white;
-      background-color: black;
+    a img {
+      max-height: 5rem;
+
+      @media #{$tablet} {
+        max-height: 6rem;
+      }
     }
 
     .app-store-btn {
@@ -430,13 +435,15 @@
 .testimonials-section {
   .h-scroll-container {
     background-color: $tipsease-green;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &::after {
       content: '';
       position: absolute;
       display: block;
       left: 0;
-      margin-top: 8px;
       width: 100vw;
       height: 400px;
       z-index: -1;
@@ -472,6 +479,7 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -483,6 +491,7 @@
     @media #{$mobile-large} {
       margin: auto;
       height: max-content;
+      max-width: 600px;
       padding-left: $medium-space;
       padding-right: $medium-space;
     }
@@ -490,10 +499,12 @@
     .quote-mark {
       font-size: 6.4rem;
       line-height: 7.7rem;
+      font-weight: 900;
     }
 
     .quote-text {
-      font-size: 2.4rem;
+      font-size: 3rem;
+      font-weight: bold;
     }
 
     .quote-person, .quote-occupation {
@@ -526,7 +537,8 @@
     }
 
     .stat-title {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 500;
       text-align: center;
       margin-bottom: $large-space;
     }
@@ -535,20 +547,13 @@
   &::after {
     content: '';
     position: absolute;
-    top: -6rem;
     left: 50%;
     transform: translate(-50%);
-    width: 170%;
-    height: calc(100% + 6rem);
+    width: 100vw;
+    height: 100%;
+    background: url('../assets/img/stats-bg.png') center center no-repeat;
+    background-size: 100% 100%;
     z-index: -2;
-    background-color: darken(desaturate($tipsease-purple, 15%), 10%);
-    border-radius: 100%;
-
-    @media #{$tablet} {
-      width: 200%;
-      height: 200%;
-      top: -100%;
-    }
   }
 }
 
@@ -576,6 +581,11 @@ footer {
   color: white;
   padding-bottom: $large-space;
 
+  @media #{$desktop} {
+    padding-left: $normal-space;
+    padding-right: $normal-space;
+  }
+
   .footer-btns-container {
     @include flexbox(null, space-between, center, null);
     margin-top: $medium-space;
@@ -599,16 +609,20 @@ footer {
         margin-left: $small-space;
         color: black;
 
+        &:hover, &:active {
+          background-color: rgba(255,255,255,0.8);
+        }
+
         &.twitter::before {
-          content: 'T';
+          content: url('../assets/img/twitter-black.svg');
         }
 
         &.facebook::before {
-          content: 'F';
+          content: url('../assets/img/facebook-black.svg');
         }
 
         &.linkedin::before {
-          content: 'L';
+          content: url('../assets/img/linkedin-black.svg');
         }
       }
     }
@@ -621,6 +635,7 @@ footer {
 
   .copyright, .footer-link {
     font-size: $small-space;
+    font-weight: 500;
   }
 
   .footer-links-container {

@@ -1,7 +1,7 @@
 //====== VARIABLES ======//
 $dropdown-height: 5rem;
 $dropdown-bg-color: $tipsease-green;
-$option-bg-color: $placeholder-light-grey;
+$option-bg-color: white;
 
 
 //==== COMPONENT STYLES ======//
@@ -19,7 +19,12 @@ $option-bg-color: $placeholder-light-grey;
     font-weight: bold;
     background-color: $dropdown-bg-color;
     border: none;
+    border-radius: 5px;
     @include flexbox(row, center);
+
+    &:hover {
+      background-color: darken($tipsease-green, 8%);
+    }
 
     .selected-value {
       line-height: $dropdown-height;
@@ -35,7 +40,7 @@ $option-bg-color: $placeholder-light-grey;
       @include flexbox(column, center);
 
       &::before {
-        content: 'v';
+        content: url('../assets/img/caret-down-black.svg');
       }
     }
   }
@@ -43,6 +48,7 @@ $option-bg-color: $placeholder-light-grey;
   .options-container {
     position: fixed;
     width: 100%;
+    height: fit-content;
     bottom: 0;
     left: 0;
     font-size: inherit;
@@ -52,17 +58,18 @@ $option-bg-color: $placeholder-light-grey;
     @media #{$tablet} {
       bottom: $medium-space;
       left: 0;
-      margin: 0 auto;
       padding: 0 $medium-space;
+      box-shadow: unset;
     }
 
     @media #{$desktop} {
       position: absolute;
       top: 0;
       padding: unset;
+      box-shadow: 0 1.2rem 3.5rem rgba(0,0,0,0.2);
     }
 
-    option {
+    .option {
       font-weight: bold;
       line-height: $dropdown-height;
       background-color: $option-bg-color;
