@@ -1,30 +1,7 @@
 (function processSteps() {
-  let contactlessSteps = [];
-  let applePaySteps = [];
-  let googlePaySteps = [];
-  let bitcoinSteps = [];
 
   const processDropdown = document.querySelector('.process-dropdown');
   const processDropdownOptions = processDropdown.querySelector('.options-container');
-
-  // Seperate the data into the relevant variables
-  const separateSteps = processStepsData.reduce((acc, currentStep) => {
-    switch (currentStep.option) {
-      case 'contactless':
-        contactlessSteps = [...currentStep.steps];
-      break;
-      case 'apple-pay':
-        applePaySteps = [...currentStep.steps];
-      break;
-      case 'google-pay':
-        googlePaySteps = [...currentStep.steps];
-      break;
-      case 'bitcoin':
-        bitcoinSteps = [...currentStep.steps];
-      break;
-    }
-    return acc;
-  }, false);
 
   function createStepElement(data) {
     let output = [];
@@ -47,60 +24,40 @@
   }
 
   // Create elements from the dataset
-  const contactlessElements = createStepElement(contactlessSteps);
-  const applePayElements = createStepElement(applePaySteps);
-  const googlePayElements = createStepElement(googlePaySteps);
-  const bitcoinElements = createStepElement(bitcoinSteps);
+   const allStepElements = createStepElement(processStepsData);
 
   (function renderStepElements() {
-    const parentSection = document.querySelector('.process-section .process-steps');
-    const allElements = [...contactlessElements, ...applePayElements, ...googlePayElements, ...bitcoinElements];
+    const targetSection = document.querySelector('.process-section .process-steps');
 
-    for (var i = 0; i < allElements.length; i++) {
-      parentSection.appendChild(allElements[i]);
+    for (var i = 0; i < allStepElements.length; i++) {
+      targetSection.appendChild(allStepElements[i]);
     }
   })();
 
-  // Shows/hides elements when an option is selected on the process dropdown component
-  function showSteps() {
-    switch (processDropdown.dataset.selected) {
-      case 'contactless':
-        for (var i = 0; i < contactlessElements.length; i++) {
-          contactlessElements[i].style.display = '';
-        }
-      break;
-      case 'apple-pay':
-        for (var i = 0; i < applePayElements.length; i++) {
-          applePayElements[i].style.display = '';
-        }
-      break;
+  // Shows elements when an option is selected on the process dropdown component
+  function showSelectedSteps() {
+    const selectedOption = processDropdown.dataset.selected;
 
-      case 'google-pay':
-        for (var i = 0; i < googlePayElements.length; i++) {
-          googlePayElements[i].style.display = '';
-        }
-      break;
+    for (var i = 0; i < allStepElements.length; i++) {
+      const elementIsSelected = allStepElements[i].classList.contains(selectedOption);
 
-      case 'bitcoin':
-        for (var i = 0; i < bitcoinElements.length; i++) {
-          bitcoinElements[i].style.display = '';
-        }
-      break;
+      if (elementIsSelected) {
+        allStepElements[i].style.display = '';
+      }
     }
   }
 
   // When an option is clicked show steps
   processDropdownOptions.addEventListener('click', () => {
     // Hide all elements
-    const allStepElements = document.querySelectorAll('.process-circle');
     for (var i = 0; i < allStepElements.length; i++) {
       allStepElements[i].style.display = 'none';
     }
 
     // Show selected elements
-    showSteps();
+    showSelectedSteps();
   });
 
   // Show steps of initially selected option
-  showSteps()
+  showSelectedSteps();
 })();
