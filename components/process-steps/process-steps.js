@@ -8,13 +8,15 @@
     let stepElement = document.createElement('div');
     stepElement.innerHTML = '<figure><img></figure><figcaption></figcaption>';
 
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       let newStepElement = stepElement.cloneNode(true);
-      newStepElement.classList.add('h-scroll-item');
-      newStepElement.classList.add('process-circle');
-      newStepElement.classList.add(`${data[i]['step-person']}`);
-      newStepElement.classList.add(`${data[i]['option']}`);
-      newStepElement.style.display = 'none';
+      const classes = [ 'h-scroll-item', 'process-circle', `${data[i]['step-person']}`, `${data[i]['option']}`]
+
+      for (let i = 0; i < classes.length; i++) {
+        newStepElement.classList.add(classes[i]);
+      }
+
+      newStepElement.style.display = 'none'; // Hide elements by default
       newStepElement.querySelector('img').src = data[i]['step-img'];
       newStepElement.querySelector('figcaption').textContent = data[i]['step-text'];
 
@@ -29,7 +31,7 @@
   (function renderStepElements() {
     const targetSection = document.querySelector('.process-section .process-steps');
 
-    for (var i = 0; i < allStepElements.length; i++) {
+    for (let i = 0; i < allStepElements.length; i++) {
       targetSection.appendChild(allStepElements[i]);
     }
   })();
@@ -38,7 +40,7 @@
   function showSelectedSteps() {
     const selectedOption = processDropdown.dataset.selected;
 
-    for (var i = 0; i < allStepElements.length; i++) {
+    for (let i = 0; i < allStepElements.length; i++) {
       const elementIsSelected = allStepElements[i].classList.contains(selectedOption);
 
       if (elementIsSelected) {
@@ -50,7 +52,7 @@
   // When an option is clicked show steps
   processDropdownOptions.addEventListener('click', () => {
     // Hide all elements
-    for (var i = 0; i < allStepElements.length; i++) {
+    for (let i = 0; i < allStepElements.length; i++) {
       allStepElements[i].style.display = 'none';
     }
 
